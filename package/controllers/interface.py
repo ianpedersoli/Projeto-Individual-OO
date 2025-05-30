@@ -8,7 +8,6 @@ class Interface:
         master.title("Sistema de Controle de Estudantes")
         self.controller = SistemaController()
 
-        # Labels e entradas principais
         tk.Label(master, text="Nome:").grid(row=0, column=0, padx=5, pady=3)
         tk.Label(master, text="Idade:").grid(row=1, column=0, padx=5, pady=3)
         tk.Label(master, text="Matrícula:").grid(row=2, column=0, padx=5, pady=3)
@@ -20,12 +19,10 @@ class Interface:
         self.idade_entry.grid(row=1, column=1, padx=5, pady=3)
         self.matricula_entry.grid(row=2, column=1, padx=5, pady=3)
 
-        # Botões principais
         tk.Button(master, text="Adicionar Estudante", command=self.adicionar_estudante).grid(row=3, column=0, columnspan=2, pady=5)
         tk.Button(master, text="Remover Estudante", command=self.remover_estudante).grid(row=4, column=0, columnspan=2, pady=5)
         tk.Button(master, text="Listar Estudantes", command=self.listar_estudantes).grid(row=5, column=0, columnspan=2, pady=5)
 
-        # Campo e botão para notas
         tk.Label(master, text="Nota:").grid(row=6, column=0, padx=5, pady=3)
         self.nota_entry = tk.Entry(master)
         self.nota_entry.grid(row=6, column=1, padx=5, pady=3)
@@ -33,7 +30,6 @@ class Interface:
         tk.Button(master, text="Adicionar Nota", command=self.adicionar_nota).grid(row=7, column=0, columnspan=2, pady=5)
         tk.Button(master, text="Média de Notas", command=self.media_estudante).grid(row=8, column=0, columnspan=2, pady=5)
 
-        # Ações extras
         tk.Button(master, text="Limpar Banco de Dados", command=self.limpar_dados).grid(row=9, column=0, columnspan=2, pady=5)
         tk.Button(master, text="Sair", command=master.quit, bg="red", fg="white").grid(row=10, column=0, columnspan=2, pady=10)
 
